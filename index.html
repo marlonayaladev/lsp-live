@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+    <title>LSP Live · Reconocimiento de Lengua de Señas Peruana</title>
+    <meta
+      name="description"
+      content="Demo web de reconocimiento de lengua de señas peruana en tiempo real con MediaPipe y clasificación temporal en el navegador."
+    />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23CBF94A'/%3E%3Cpath d='M18 44V20h6l8 12 8-12h6v24h-6V31l-6 9h-4l-6-9v13z' fill='%230A0C0F'/%3E%3C/svg%3E" />
+    <style>
+      html, body, #root { height: 100%; margin: 0; }
+      body { background: #0a0c0f; color: #e9eef6; font-family: "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif; }
+      #boot { position: fixed; inset: 0; display: grid; place-items: center; gap: 14px; }
+      #boot .mark { width: 46px; height: 46px; border-radius: 14px; background: #cbf94a; color: #0a0c0f; display: grid; place-items: center; font-weight: 800; letter-spacing: -.04em; }
+      #boot .row { display: flex; align-items: center; gap: 12px; opacity: .85; font-size: 13px; letter-spacing: .02em; }
+      #boot .spin { width: 14px; height: 14px; border-radius: 50%; border: 2px solid rgba(255,255,255,.18); border-top-color: #cbf94a; animation: sp .8s linear infinite; }
+      @keyframes sp { to { transform: rotate(360deg); } }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="boot">
+      <div class="mark">LS</div>
+      <div class="row"><span class="spin"></span> Cargando LSP Live…</div>
+    </div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
