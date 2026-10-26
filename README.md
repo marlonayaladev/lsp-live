@@ -10,6 +10,8 @@ las señas a texto en español. Sin servidor, sin nube, sin enviar un solo frame
 ![Local](https://img.shields.io/badge/Edge_AI-100%25_local-9ACD32)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
+[![Demo en vivo](https://img.shields.io/badge/%E2%96%B6_demo_en_vivo-marlonayaladev.github.io%2Flsp--live-9ACD32)](https://marlonayaladev.github.io/lsp-live/)
+
 ![Vista En vivo](docs/live.png)
 
 ---
@@ -53,7 +55,10 @@ pipeline completo y llevar una demo funcional sin depender de un teléfono.
 
 ## Arranque rápido
 
-Requisitos: **Node.js 18+**, **Chrome o Edge** actualizado y **webcam**.
+**Demo en línea:** <https://marlonayaladev.github.io/lsp-live/> (Chrome o Edge, requiere webcam y
+permiso de cámara).
+
+Requisitos locales: **Node.js 18+**, **Chrome o Edge** actualizado y **webcam**.
 
 ```bash
 npm install
@@ -130,6 +135,8 @@ webcam 30 fps
 │     ├─ store.js           IndexedDB (señas y muestras)
 │     └─ storage.js         preferencias, transcripción y utilidades
 ├─ docs/                    capturas para este README
+├─ .github/workflows/
+│  └─ pages.yml             despliegue automático a GitHub Pages
 └─ tests/
    ├─ core.test.mjs         pruebas de geometría y clasificador
    ├─ smoke.mjs             prueba E2E vía CDP

@@ -1,11 +1,11 @@
-/** Smoke test E2E: requiere `npm run dev` y un navegador con CDP en el puerto indicado. */
+﻿/** Smoke test E2E: requiere `npm run dev` y un navegador con CDP en el puerto indicado. */
 const PORT = Number(process.argv[2] || 9336);
-const URL_APP = "http://127.0.0.1:5180/";
+const URL_APP = process.argv[3] || "http://127.0.0.1:5180/";
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const targets = await fetch(`http://127.0.0.1:${PORT}/json/list`).then((r) => r.json());
 const page = targets.find((t) => t.type === "page");
-if (!page) throw new Error("No hay pestaña disponible en el navegador de depuración");
+if (!page) throw new Error("No hay pestaÃ±a disponible en el navegador de depuraciÃ³n");
 
 const ws = new WebSocket(page.webSocketDebuggerUrl);
 await new Promise((res, rej) => {
